@@ -14,12 +14,12 @@ const Home = (props) => {
       <div class="container-fluid py-5">
      <div class="row">
 			<Icon />
-      <Cards />
-			<Cards />
-			<Cards />
-      <Cards />
-			<Cards />
-      <Cards counter1={props.count}/>
+      <Cards counter1={Math.floor(props.count/100000) % 10}/>
+			<Cards counter1={Math.floor(props.count/10000) % 10}/>
+			<Cards counter1={Math.floor(props.count/1000) % 10}/>
+      <Cards counter1={Math.floor(props.count/100) % 10}/>
+			<Cards counter1={Math.floor(props.count/10) % 10}/>
+      <Cards counter1={props.count % 10}/>
 			</div>
       </div>
       </div>

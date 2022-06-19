@@ -7,9 +7,17 @@ import "../styles/index.css";
 
 //import your own components
 import Home from "./component/home.jsx";
+import Cards from "./component/cards.jsx";
 
+window.onload = () => {
+  let count = 0;
 
+  const counter = () => {
+    count++;
+    console.log(count);
+  
 
-
-
-ReactDOM.render(<Home />, document.querySelector("#app"));
+  ReactDOM.render(<Home count={count} />, document.querySelector("#app"));
+};
+  setInterval(counter, 1000);
+};

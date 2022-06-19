@@ -1,24 +1,38 @@
 import React from "react";
+import Cards from "./cards.jsx";
+import Icon from "./icon.jsx";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 
-//create your first component
-const Home = () => {
+const Home = (props) => {
+
+  let count = 0;
+
+let counter = () => {
+
+  count++
+
+};
+
+setInterval(counter,1000);
+
   return (
-    <div>
-      <h1 className="text-center mt-5">Hello Rigo!</h1>
-      <p>
-        <img src={rigoImage} />
-      </p>
-      <a href="#" className="btn btn-success">
-        If you see this green button... bootstrap is working...
-      </a>
-      <p>
-        Made by <a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-        love!
-      </p>
-    </div>
+  <React.Fragment>
+     <div class="p-5 mb-4 bg-light rounded-3 bg-dark">
+      <div class="container-fluid py-5">
+   <div class="row">
+			<Icon />
+      <Cards />
+			<Cards />
+			<Cards />
+			<Cards />
+      <Cards />
+			<Cards />
+			</div>
+      </div>
+      </div>
+  </React.Fragment>
+     
+  
   );
 };
 
